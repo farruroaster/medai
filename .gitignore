@@ -1,0 +1,10 @@
+# Ignore virtual environments
+venv/
+api/venv/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore large dependencies
+*.dylib
+
