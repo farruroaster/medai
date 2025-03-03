@@ -1,0 +1,56 @@
+steps to run the app 
+Open your terminal and navigate to your project directory:
+
+cd ~/medai
+
+2️⃣ Start the Backend (API)
+
+Navigate to the backend folder and activate the virtual environment:
+
+cd api
+source venv/bin/activate
+
+Ensure dependencies are installed:
+
+pip install -r requirements.txt
+
+Start the backend server:
+
+python main.py
+
+✅ Confirm: Open http://192.168.1.163:5001 in your browser. You should see: {"message":"MedAI API is running!"}
+
+3️⃣ Start the Frontend (UI)
+
+Open a new terminal window (do not close the backend terminal) and navigate to the frontend directory:
+
+cd ~/medai/ui
+
+Ensure dependencies are installed:
+
+npm install
+
+Start the frontend in development mode:
+
+npm run dev
+
+✅ Confirm: Open http://localhost:5173 in your browser to see the UI.
+
+4️⃣ Check Backend-Frontend Connection
+
+If the frontend is not fetching data:
+
+Open ui/.env and ensure the API URL is correctly set:
+
+VITE_API_URL=http://192.168.1.163:5001
+
+Restart the frontend:
+
+npm run dev
+
+✅ Final Check: Open Developer Tools (F12) → Go to Network Tab → Refresh the page → Ensure API calls succeed.
+
+5️⃣ Stop the App (If Needed)
+
+To stop the backend, press Ctrl + C in the backend terminal.
+To stop the frontend, press Ctrl + C in the frontend terminal.
